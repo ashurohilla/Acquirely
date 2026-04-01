@@ -36,10 +36,10 @@ const flywheelPhases = [
 
 function FlywheelDiagramPlaceholder() {
   return (
-    <div className="rounded-[14px] bg-white p-5 shadow-[0px_0px_4px_rgba(0,0,0,0.18)]">
-      <div className="rounded-[14px] border border-[#E9E6E0] bg-[#FFFDFC] p-8">
-        <div className="flex min-h-[320px] items-center justify-center">
-          <div className="relative flex w-full max-w-[640px] items-center justify-center gap-4">
+    <div className="rounded-[14px] bg-white p-3 shadow-[0px_0px_4px_rgba(0,0,0,0.18)] sm:p-5">
+      <div className="rounded-[14px] border border-[#E9E6E0] bg-[#FFFDFC] p-4 sm:p-8">
+        <div className="flex min-h-[260px] items-center justify-center sm:min-h-[320px]">
+          <div className="relative flex w-full max-w-[640px] items-center justify-center gap-2 sm:gap-4">
             <div className="flex h-[210px] w-[230px] flex-col justify-between rounded-[22px] bg-[#C9D7FB] p-5">
               <div className="mx-auto rounded bg-[#152C4C] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
                 Campaign 1
@@ -94,54 +94,54 @@ function FlywheelDiagramPlaceholder() {
 export default function A3FlywheelSection() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-20 lg:py-[84px]">
+      <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-6 lg:px-20 lg:py-[84px]">
         <div className="mx-auto max-w-[687px] text-center">
           <div className="inline-flex h-[34px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-[10px]">
-            <span className="text-base">🚀</span>
-            <span className="font-['Inter'] text-[12px] font-semibold uppercase tracking-[1.2px] text-[#5332E2]">
+            <span className="text-base">+</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-[#5332E2] sm:text-[12px]">
               The A3 Flywheel Solution
             </span>
           </div>
 
-          <h2 className="mt-8 font-['Montserrat'] text-[40px] font-extrabold leading-[44px] text-black">
+          <h2 className="mt-8 text-[31px] font-extrabold leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
             <span className="block">The Growth System Built for the</span>
             <span className="block bg-[linear-gradient(90deg,#818CF8_0%,#F97316_42.79%)] bg-clip-text text-transparent">
               New Meta Ads Era
             </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-[662px] font-['Open_Sans'] text-[18px] leading-7 text-[#7B8BA0]">
-            Most brands approach advertising without a structured scaling
-            framework. Instead of a system, they rely on random actions that
-            don't compound growth. Here's what actually happens:
+          <p className="mx-auto mt-5 max-w-[662px] text-[16px] leading-7 text-[#7B8BA0] sm:text-[18px]">
+            Most brands approach advertising without a structured scaling framework.
+            Instead of a system, they rely on random actions that don't compound growth.
+            Here's what actually happens:
           </p>
         </div>
 
-        <div className="mt-14 grid gap-12 lg:grid-cols-[480px_minmax(0,1fr)] lg:items-start">
+        <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-[480px_minmax(0,1fr)] lg:items-start lg:gap-12">
           <div className="space-y-10">
             {flywheelPhases.map((phase) => (
-              <div key={phase.code} className="flex items-start gap-[29px]">
+              <div key={phase.code} className="flex items-start gap-4 sm:gap-[29px]">
                 <div
                   className={`grid h-[53px] w-[53px] shrink-0 place-items-center rounded-[10px] bg-gradient-to-br ${phase.accent}`}
                 >
-                  <span className="font-['Montserrat'] text-[26px] font-extrabold leading-[44px] text-white">
+                  <span className="text-[26px] font-extrabold leading-[44px] text-white">
                     {phase.code}
                   </span>
                 </div>
 
                 <div className="pt-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="font-['Montserrat'] text-[16px] font-semibold leading-7 text-black">
+                    <h3 className="text-[16px] font-semibold leading-7 text-black">
                       {phase.title}
                     </h3>
                     <span
-                      className={`rounded-[4px] border px-[7px] py-[2px] font-['Montserrat'] text-[14px] font-semibold leading-[17px] ${phase.badgeClass}`}
+                      className={`rounded-[4px] border px-[7px] py-[2px] text-[12px] font-semibold leading-[17px] sm:text-[14px] ${phase.badgeClass}`}
                     >
                       {phase.timeframe}
                     </span>
                   </div>
 
-                  <p className="mt-1 max-w-[433px] font-['Open_Sans'] text-[15px] font-semibold leading-5 text-[#7B8BA0]">
+                  <p className="mt-1 max-w-[433px] text-[14px] font-medium leading-6 text-[#7B8BA0] sm:text-[15px] sm:leading-5">
                     {phase.description}
                   </p>
 
@@ -149,7 +149,7 @@ export default function A3FlywheelSection() {
                     {phase.tags.map((tag) => (
                       <span
                         key={tag}
-                        className={`rounded-[4px] border bg-white px-[7px] py-[3px] font-['Open_Sans'] text-[12px] leading-4 text-[#7B8BA0] ${phase.tagBorder}`}
+                        className={`rounded-[4px] border bg-white px-[7px] py-[3px] text-[11px] leading-4 text-[#7B8BA0] sm:text-[12px] ${phase.tagBorder}`}
                       >
                         {tag}
                       </span>

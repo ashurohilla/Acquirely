@@ -4,7 +4,7 @@ const benefitCards = [
   {
     title: "Data Compounds",
     description:
-      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 - because they're built on real performance data.",
+      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 because they're built on real performance data.",
     value: "10x",
     label: "Smarter by Month 6",
     icon: BarChart3,
@@ -13,8 +13,8 @@ const benefitCards = [
   {
     title: "Revenue Compounds",
     description:
-      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 - because they're built on real performance data.",
-    value: "3–5x",
+      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 because they're built on real performance data.",
+    value: "3-5x",
     label: "Revenue Growth in 6 Months",
     icon: TrendingUp,
     iconText: null,
@@ -22,27 +22,27 @@ const benefitCards = [
   {
     title: "CAC Compounds Down",
     description:
-      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 - because they're built on real performance data.",
+      "Every test adds to your brand's intelligence library. Month 6 campaigns are 10x smarter than Month 1 because they're built on real performance data.",
     value: "-40%",
     label: "Average CAC Reduction",
     icon: null,
-    iconText: "₹",
+    iconText: "Rs",
   },
 ];
 
 const metricsTop = [
   {
     label: "Revenue",
-    change: "↑ 3x",
-    value: "₹15L",
+    change: "+3x",
+    value: "Rs.15L",
     suffix: "/month",
-    previous: "₹5L",
-    current: "₹15L",
+    previous: "Rs.5L",
+    current: "Rs.15L",
     progress: "75%",
   },
   {
     label: "ROAS",
-    change: "↑ 75%",
+    change: "+75%",
     value: "4.39x",
     suffix: "",
     previous: "2.5x",
@@ -54,13 +54,13 @@ const metricsTop = [
 const metricsBottom = [
   {
     label: "Cost Per Click",
-    value: "₹4.2",
-    note: "↓ 58% from ₹10.1",
+    value: "Rs.4.2",
+    note: "-58% from Rs.10.1",
   },
   {
     label: "Conv. Rate",
     value: "4.8%",
-    note: "↑ 3.1x from 1.5%",
+    note: "+3.1x from 1.5%",
   },
 ];
 
@@ -80,29 +80,23 @@ function BenefitCard({
   iconText: string | null;
 }) {
   return (
-    <div className="rounded-[6px] border border-black/10 bg-white px-10 py-[52px] text-center">
+    <div className="rounded-[6px] border border-black/10 bg-white px-6 py-10 text-center sm:px-10 sm:py-[52px]">
       <div className="mx-auto grid h-[72px] w-[75px] place-items-center rounded-[5px] bg-[#5652E9]">
         {Icon ? (
           <Icon className="h-10 w-10 text-[#FFCD29]" />
         ) : (
-          <span className="font-['Sora'] text-5xl font-extrabold leading-none text-[#FFCD29]">
+          <span className="text-3xl font-extrabold leading-none text-[#FFCD29] sm:text-5xl">
             {iconText}
           </span>
         )}
       </div>
-      <h3 className="mt-5 font-['Montserrat'] text-[20px] font-semibold leading-7 text-black">
-        {title}
-      </h3>
-      <p className="mx-auto mt-2 max-w-[305px] font-['Open_Sans'] text-[16px] font-semibold leading-[22px] text-[#7B8BA0]">
+      <h3 className="mt-5 text-[20px] font-semibold leading-7 text-black">{title}</h3>
+      <p className="mx-auto mt-2 max-w-[305px] text-[16px] font-semibold leading-[22px] text-[#7B8BA0]">
         {description}
       </p>
-      <div className="mx-auto mt-7 w-[275px] border-t border-black/10 pt-5">
-        <div className="font-['Montserrat'] text-[30px] font-extrabold leading-9 text-[#252525]">
-          {value}
-        </div>
-        <p className="mt-1 font-['Open_Sans'] text-[14px] leading-5 text-[#707984]">
-          {label}
-        </p>
+      <div className="mx-auto mt-7 w-full max-w-[275px] border-t border-black/10 pt-5">
+        <div className="text-[30px] font-extrabold leading-9 text-[#252525]">{value}</div>
+        <p className="mt-1 text-[14px] leading-5 text-[#707984]">{label}</p>
       </div>
     </div>
   );
@@ -127,28 +121,18 @@ function StatCard({
 }) {
   return (
     <div className="rounded-xl bg-white p-4">
-      <div className="flex items-center justify-between">
-        <span className="font-['Open_Sans'] text-[12px] uppercase tracking-[0.3px] text-[#737373]">
-          {label}
-        </span>
-        <span className="font-['Open_Sans'] text-[12px] font-semibold text-[#22C55E]">
-          {change}
-        </span>
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-[12px] uppercase tracking-[0.3px] text-[#737373]">{label}</span>
+        <span className="text-[12px] font-semibold text-[#22C55E]">{change}</span>
       </div>
       <div className="mt-2 flex items-end gap-1">
-        <span className="font-['Montserrat'] text-[30px] font-bold leading-9 tracking-[-0.5px] text-black">
-          {value}
-        </span>
-        {suffix ? (
-          <span className="mb-1 font-['Open_Sans'] text-[12px] text-[#737373]">
-            {suffix}
-          </span>
-        ) : null}
+        <span className="text-[30px] font-bold leading-9 tracking-[-0.5px] text-black">{value}</span>
+        {suffix ? <span className="mb-1 text-[12px] text-[#737373]">{suffix}</span> : null}
       </div>
-      <div className="mt-1 flex items-center gap-1.5 text-[12px]">
-        <span className="font-['Inter'] text-[#525252] line-through">{previous}</span>
-        <span className="text-[#22C68D]">→</span>
-        <span className="font-['Inter'] font-semibold text-[#22C68D]">{current}</span>
+      <div className="mt-1 flex flex-wrap items-center gap-1.5 text-[12px]">
+        <span className="text-[#525252] line-through">{previous}</span>
+        <span className="text-[#22C68D]">to</span>
+        <span className="font-semibold text-[#22C68D]">{current}</span>
       </div>
       <div className="mt-3 h-[6px] rounded-full bg-[#E6E6E6]">
         <div className="h-[6px] rounded-full bg-[#22C68D]" style={{ width: progress }} />
@@ -157,37 +141,17 @@ function StatCard({
   );
 }
 
-function MiniMetric({
-  label,
-  value,
-  note,
-}: {
-  label: string;
-  value: string;
-  note: string;
-}) {
+function MiniMetric({ label, value, note }: { label: string; value: string; note: string }) {
   return (
     <div className="rounded-xl bg-white p-4">
-      <div className="font-['Inter'] text-[12px] uppercase tracking-[0.3px] text-[#737373]">
-        {label}
-      </div>
-      <div className="mt-2 font-['Montserrat'] text-[20px] font-bold leading-7 tracking-[-0.5px] text-black">
-        {value}
-      </div>
-      <div className="mt-1 font-['Inter'] text-[12px] font-semibold text-[#4ADE80]">
-        {note}
-      </div>
+      <div className="text-[12px] uppercase tracking-[0.3px] text-[#737373]">{label}</div>
+      <div className="mt-2 text-[20px] font-bold leading-7 tracking-[-0.5px] text-black">{value}</div>
+      <div className="mt-1 text-[12px] font-semibold text-[#4ADE80]">{note}</div>
     </div>
   );
 }
 
-function DummyScreenshot({
-  className,
-  title,
-}: {
-  className?: string;
-  title: string;
-}) {
+function DummyScreenshot({ className, title }: { className?: string; title: string }) {
   return (
     <div className={`overflow-hidden rounded-lg bg-white shadow-[0px_0px_14px_rgba(0,0,0,0.18)] ${className ?? ""}`}>
       <div className="h-7 bg-[#F3F4F6] px-3">
@@ -206,7 +170,7 @@ function DummyScreenshot({
             Export
           </div>
         </div>
-        <div className="grid grid-cols-[160px_1fr] gap-3">
+        <div className="grid grid-cols-[100px_1fr] gap-3 sm:grid-cols-[160px_1fr]">
           <div className="space-y-2">
             {Array.from({ length: 6 }).map((_, index) => (
               <div key={index} className="h-6 rounded bg-[#E5E7EB]" />
@@ -235,17 +199,26 @@ function DummyScreenshot({
   );
 }
 
+function AlertTriangleLike() {
+  return (
+    <div className="relative h-[22px] w-[23px]">
+      <div className="absolute inset-[2px] rounded-[4px] border border-[#F87171]" />
+      <div className="absolute left-1/2 top-[5px] h-[7px] w-0 -translate-x-1/2 border border-[#F87171]" />
+      <div className="absolute bottom-[4px] left-1/2 h-[3px] w-[3px] -translate-x-1/2 rounded-full bg-[#F87171]" />
+    </div>
+  );
+}
+
 export default function FlywheelProofSection() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-20 lg:py-[96px]">
+      <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-6 lg:px-20 lg:py-[96px]">
         <div className="mx-auto max-w-[757px] text-center">
-          <h2 className="font-['Montserrat'] text-[40px] font-extrabold leading-[44px] text-black">
+          <h2 className="text-[31px] font-extrabold leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
             Why the Flywheel Wins Every Time
           </h2>
-          <p className="mt-5 font-['Open_Sans'] text-[18px] leading-7 text-[#7B8BA0]">
-            Each phase amplifies the next. The longer it spins, the harder it is
-            to stop.
+          <p className="mt-5 text-[16px] leading-7 text-[#7B8BA0] sm:text-[18px]">
+            Each phase amplifies the next. The longer it spins, the harder it is to stop.
           </p>
         </div>
 
@@ -258,20 +231,18 @@ export default function FlywheelProofSection() {
         <div className="mt-[90px] text-center">
           <div className="inline-flex h-[34px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-[18px]">
             <span className="h-2 w-2 rounded-full bg-[#5332E2]" />
-            <span className="font-['Inter'] text-[12px] font-semibold uppercase tracking-[1.2px] text-[#5332E2]">
+            <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-[#5332E2] sm:text-[12px]">
               Real client. Real numbers. Real proof.
             </span>
           </div>
-          <h2 className="mx-auto mt-8 max-w-[873px] font-['Montserrat'] text-[40px] font-extrabold leading-[44px] text-black">
+          <h2 className="mx-auto mt-8 max-w-[873px] text-[31px] font-extrabold leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
             Real Results from the A3 Flywheel Model
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[534px_621px] lg:items-start lg:justify-center">
+        <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,534px)_minmax(0,621px)] lg:items-start lg:justify-center">
           <div>
-            <h3 className="font-['Montserrat'] text-[26px] font-bold leading-7 text-black">
-              Case Study: Gaming Brand
-            </h3>
+            <h3 className="text-[26px] font-bold leading-7 text-black">Case Study: Gaming Brand</h3>
 
             <div className="mt-11 space-y-[18px]">
               <div className="rounded-2xl border border-[#F87171] bg-white p-6">
@@ -280,11 +251,9 @@ export default function FlywheelProofSection() {
                     <AlertTriangleLike />
                   </div>
                   <div>
-                    <h4 className="font-['Montserrat'] text-[18px] font-semibold leading-7 text-black">
-                      Problem:
-                    </h4>
-                    <p className="font-['Open_Sans'] text-[16px] font-semibold leading-[22px] text-[#7B8BA0]">
-                      Revenue stuck at ₹5L per month with ROAS 2.5
+                    <h4 className="text-[18px] font-semibold leading-7 text-black">Problem:</h4>
+                    <p className="text-[15px] font-semibold leading-6 text-[#7B8BA0] sm:text-[16px] sm:leading-[22px]">
+                      Revenue stuck at Rs.5L per month with ROAS 2.5
                     </p>
                   </div>
                 </div>
@@ -296,10 +265,8 @@ export default function FlywheelProofSection() {
                     <Lightbulb className="h-6 w-6 fill-[#FFCD29] text-[#FFCD29]" />
                   </div>
                   <div>
-                    <h4 className="font-['Montserrat'] text-[18px] font-semibold leading-7 text-black">
-                      Strategy Implemented:
-                    </h4>
-                    <p className="font-['Open_Sans'] text-[16px] font-semibold leading-[22px] text-[#7B8BA0]">
+                    <h4 className="text-[18px] font-semibold leading-7 text-black">Strategy Implemented:</h4>
+                    <p className="text-[15px] font-semibold leading-6 text-[#7B8BA0] sm:text-[16px] sm:leading-[22px]">
                       A3 Flywheel Model + Structured Creative
                       <br />
                       Testing Engine
@@ -309,11 +276,9 @@ export default function FlywheelProofSection() {
               </div>
             </div>
 
-            <h3 className="mt-12 font-['Montserrat'] text-[26px] font-bold leading-7 text-black">
-              Results After 90 Days
-            </h3>
+            <h3 className="mt-12 text-[26px] font-bold leading-7 text-black">Results After 90 Days</h3>
 
-            <div className="mt-8 rounded-[21px] border border-[#C9F6E1] bg-[#DEFBED] p-8">
+            <div className="mt-8 rounded-[21px] border border-[#C9F6E1] bg-[#DEFBED] p-5 sm:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
                 {metricsTop.map((metric) => (
                   <StatCard key={metric.label} {...metric} />
@@ -325,44 +290,33 @@ export default function FlywheelProofSection() {
             </div>
 
             <div className="mt-9 rounded-[14px] bg-[#496690] px-6 py-7">
-              <p className="max-w-[481px] font-['Open_Sans'] text-[18px] font-light leading-[25px] text-white">
-                "Finally an agency that thinks in systems, not campaigns. We
-                stopped guessing and started scaling."
+              <p className="max-w-[481px] text-[18px] font-light leading-[25px] text-white">
+                "Finally an agency that thinks in systems, not campaigns. We stopped guessing and started scaling."
               </p>
-              <p className="mt-4 font-['Montserrat'] text-[22px] font-semibold leading-10 text-white">
-                Founder, Gaming Brand
-              </p>
+              <p className="mt-4 text-[22px] font-semibold leading-10 text-white">Founder, Gaming Brand</p>
               <div className="mt-1 flex items-center gap-1 text-[#FFA227]">
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <span key={index}>★</span>
+                  <span key={index}>*</span>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="relative min-h-[920px]">
+          <div className="relative min-h-0 lg:min-h-[920px]">
             <div className="relative">
               <DummyScreenshot title="Meta Ads Manager" className="h-[336px] w-full rounded-lg" />
               <div className="absolute left-1/2 top-1/2 grid h-[63px] w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/95 shadow-lg">
                 <Play className="ml-1 h-8 w-8 fill-black text-black" />
               </div>
             </div>
-            <DummyScreenshot title="Shopify Dashboard" className="absolute right-0 top-[393px] h-[201px] w-[511px]" />
-            <DummyScreenshot title="Analytics Panel" className="absolute left-[7px] top-[540px] h-[182px] w-[380px]" />
-            <DummyScreenshot title="Performance Report" className="absolute right-0 top-[711px] h-[209px] w-[445px]" />
+            <div className="mt-4 grid gap-4 lg:contents">
+              <DummyScreenshot title="Shopify Dashboard" className="h-[201px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px]" />
+              <DummyScreenshot title="Analytics Panel" className="h-[182px] w-full lg:absolute lg:left-[7px] lg:top-[540px] lg:w-[380px]" />
+              <DummyScreenshot title="Performance Report" className="h-[209px] w-full lg:absolute lg:right-0 lg:top-[711px] lg:w-[445px]" />
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function AlertTriangleLike() {
-  return (
-    <div className="relative h-[22px] w-[23px]">
-      <div className="absolute inset-[2px] rounded-[4px] border border-[#F87171]" />
-      <div className="absolute left-1/2 top-[5px] h-[7px] w-0 -translate-x-1/2 border border-[#F87171]" />
-      <div className="absolute bottom-[4px] left-1/2 h-[3px] w-[3px] -translate-x-1/2 rounded-full bg-[#F87171]" />
-    </div>
   );
 }
