@@ -1,12 +1,12 @@
 import { BarChart3, Lightbulb, Play, TrendingUp } from "lucide-react";
 import Image from "next/image";
-import growth from "../public/growth.png";
-import chart from "../public/charts.png";
-import ruppe from "../public/ruppe.png";
-import shopifydashboard from "../public/shopifydashboard.png";
-import campaigns from "../public/campaigns.png";
-import campaigns2 from "../public/campaigns2.png";
-import metaadsmanager from "../public/metadsmanager.png";
+import growth from "@/app/assests/growth.png";
+import chart from "@/app/assests/charts.png";
+import ruppe from "@/app/assests/ruppe.png";
+import shopifydashboard from "@/app/assests/shopifydashboard.png";
+import campaigns from "@/app/assests/campaigns.png";
+import campaigns2 from "@/app/assests/campaigns2.png";
+import metaadsmanager from "@/app/assests/metadsmanager.png";
 import { StaticImageData } from "next/image";
 const benefitCards = [
   {
