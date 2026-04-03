@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Check, Star } from "lucide-react";
+import { ArrowRight, Check, CrossIcon, Star } from "lucide-react";
 import A3FlywheelSection from "@/components/A3FlywheelSection";
 import CostBreakdownSection from "@/components/CostBreakdownSection";
 import FaqSection from "@/components/FaqSection";
@@ -18,6 +18,7 @@ import Client3 from "@/app/assests/Client3.png"
 import Client4 from "@/app/assests/Client4.png"
 import checkericon from "@/app/assests/checkricon.png"
 import CtaBreakPastSection from "./CtaBreakPastSection";
+import shopifydash from "@/app/assests/metadsmanager.png"
 
 
 const qualificationStats = [
@@ -61,7 +62,7 @@ export default function AgencyLandingPage() {
                 Accepting 2 new d2c brands this month
               </div>
 
-              <h1 className="mt-6 text-[34px] font-extrabold leading-[0.95] tracking-[-0.5px] text-white sm:text-[40px] lg:text-[48px] lg:leading-[48px]">
+              <h1 className="mt-6 text-[30px] font-extrabold leading-[1.1] lg:tracking-[-0.5px] text-white sm:text-[40px] lg:text-[48px] lg:leading-[48px]">
                 <span className="block">Scale Your Brand from</span>
                 <span className="block bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_25%,#F97316_80%)] bg-clip-text text-transparent">
                   Rs.3L to Rs.50L+ Monthly
@@ -132,16 +133,16 @@ export default function AgencyLandingPage() {
               </div>
             </div>
 
-            <div className="relative ml-14 pt-2 lg:pt-[99px]">
-              <div className="ml-auto h-[240px] w-full rounded-[8px] bg-[#D9D9D9] sm:h-[280px] lg:h-[313px] lg:max-w-[564px]" />
+            <div className="relative ml-14 pt-2 lg:pt-[99px] hidden lg:block">
+              <Image src={shopifydash} alt="Shopify Dashboard" className="ml-auto h-[240px] w-full rounded-[8px] bg-[#D9D9D9] sm:h-[280px] lg:h-[313px] lg:max-w-[564px]" />
               <div className="relative mt-4 flex h-[62px] w-[181px] items-center rounded-2xl border border-white/10 bg-white/5 px-[17px] shadow-[0px_0px_40px_rgba(99,102,241,0.15),0px_4px_24px_rgba(0,0,0,0.4)] backdrop-blur-[6px] lg:absolute lg:bottom-[-25px] lg:left-[-96px] lg:mt-0">
                <Image src={growthicon} alt="Growth Icon" className="h-8 w-8" />
-                <div className="ml-3">
-                  <p className="text-[14px] font-semibold leading-5 text-white">+$18,200 MRR</p>
-                  <p className="text-[12px] font-normal leading-4 text-[#94A3B8]">
-                    added in 90 days
-                  </p>
-                </div>
+              <div className="ml-3">
+                <p className="text-[14px] font-semibold leading-5 text-white">+$18,200 MRR</p>
+                <p className="text-[12px] font-normal leading-4 text-[#94A3B8]">
+                added in 90 days
+                </p>
+              </div>
               </div>
             </div>
           </div>
@@ -233,8 +234,8 @@ export default function AgencyLandingPage() {
               <div className="mt-12 space-y-6">
                 {notFitPoints.map((point) => (
                   <div key={point} className="flex items-start gap-3">
-                    <div className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border border-[#991B1B] bg-[#450A0A]">
-                      <span className="text-[12px] leading-none text-[#F87171]">x</span>
+                    <div className=" grid h-5 w-5 shrink-0 place-items-center rounded-full border border-[#991B1B] bg-[#450A0A]">
+                      <span className="text-[12px] leading-none items-center justify-center text-[#F87171]">x</span>
                     </div>
                     <p className="text-[14px] font-semibold leading-5 text-black">{point}</p>
                   </div>

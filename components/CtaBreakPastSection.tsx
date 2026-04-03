@@ -24,7 +24,6 @@ export default function CtaBreakPastSection() {
             <span className="font-montserrat text-[18px] font-bold leading-6 text-[#101828]">
               Book Your Growth Diagnosis Call
             </span>
-            {/* Using a custom SVG for the specific thin arrow icon */}
             <svg
               width="16"
               height="16"
@@ -44,7 +43,20 @@ export default function CtaBreakPastSection() {
           </button>
         </div>
 
-    
+        {/* Powered By Line */}
+        <div className="mt-20 border-t border-white/5 pt-8">
+          <p className="font-open-sans text-[14px] tracking-wide text-[#4B5563]">
+            Powered by{" "}
+            <a 
+              href="https://saasscale.in/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-semibold text-[#818CF8] transition-colors hover:text-[#F97316]"
+            >
+              ScaleSaaS
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );

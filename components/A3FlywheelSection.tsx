@@ -52,7 +52,7 @@ export default function A3FlywheelSection() {
       <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-6 lg:px-20 lg:py-[84px]">
         <div className="mx-auto max-w-[687px] text-center">
           <div className="inline-flex h-[34px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-[10px]">
-            <span className="text-base">+</span>
+            <span className="text-base">🚀</span>
             <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-[#5332E2] sm:text-[12px]">
               The A3 Flywheel Solution
             </span>
