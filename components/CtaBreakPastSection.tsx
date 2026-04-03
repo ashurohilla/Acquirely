@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function CtaBreakPastSection() {
   return (
     <section className="bg-[#101828] py-28 text-center">
@@ -19,7 +20,9 @@ export default function CtaBreakPastSection() {
         </p>
 
         {/* CTA Button */}
+        
         <div className="mt-12 flex items-center justify-center gap-2">
+          <Link href="applynow" className="flex items-center gap-2.5 rounded border-2 border-white bg-white px-6 py-3.5 shadow-[0_4px_18px_rgba(15,23,42,0.1)] transition hover:bg-white/90">
           <button className="flex items-center gap-2.5 rounded border-2 border-white bg-white px-6 py-3.5 shadow-[0_4px_18px_rgba(15,23,42,0.1)] transition hover:bg-white/90">
             <span className="font-montserrat text-[18px] font-bold leading-6 text-[#101828]">
               Book Your Growth Diagnosis Call
@@ -31,16 +34,17 @@ export default function CtaBreakPastSection() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="text-[#101828]"
-            >
+              >
               <path
                 d="M1 8H15M15 8L8 1M15 8L8 15"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-              />
+                />
             </svg>
           </button>
+                </Link>
         </div>
 
         {/* Powered By Line */}

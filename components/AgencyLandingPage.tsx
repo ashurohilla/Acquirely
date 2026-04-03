@@ -84,7 +84,7 @@ export default function AgencyLandingPage() {
                 </p>
 
               <Link
-                href="#"
+                href="applynow"
                 className="mt-8 inline-flex min-h-[56px] w-full max-w-[351px] items-center justify-center gap-2 bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-5 text-center text-[16px] font-bold leading-6 text-white transition hover:brightness-110 sm:text-[18px]"
               >
                 Book Your Growth Diagnosis Call
