@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  distDir: ".next-build",
+  distDir: ".next",
   typescript: {
     // Temporary safeguard while legacy shared UI files are cleaned up.
     ignoreBuildErrors: true,
