@@ -1,7 +1,7 @@
 import { AlertTriangle, X } from "lucide-react";
 import Image from "next/image";
-import Problem from "@/public/problem.png";
-import current from "@/public/current.png";
+import Problem from "../public/problem.png";
+import current from "../public/current.png";
 
 const problemCards = [
   {

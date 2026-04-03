@@ -1,4 +1,4 @@
-import flywheelmodel from "@/public/flywheelmodel.png"
+import flywheelmodel from "../public/flywheelmodel.png"
 import Image from "next/image";
 const flywheelPhases = [
   {

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import kunalmandal from "@/public/kunalmandal .png"
-import mausamarora from "@/public/mausam arora.png";
+import kunalmandal from "../public/kunalmandal .png"
+import mausamarora from "../public/mausam arora.png";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 

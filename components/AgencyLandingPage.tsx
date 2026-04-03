@@ -10,13 +10,13 @@ import FoundersSection from "@/components/FoundersSection";
 import GrowthSystemProblemSection from "@/components/GrowthSystemProblemSection";
 import PricingSection from "@/components/PricingSection";
 import Image from "next/image";
-import logo from "@/public/logo.png"
-import growthicon from "@/public/growthicon.png"
-import Client1 from "@/public/client1.png"
-import Client2 from "@/public/client2.png"
-import Client3 from "@/public/client3.png"
-import Client4 from "@/public/client4.png"
-import checkericon from "@/public/checkricon.png"
+import logo from "../public/logo.png"
+import growthicon from "../public/growthicon.png"
+import Client1 from "../public/client1.png"
+import Client2 from "../public/client2.png"
+import Client3 from "../public/client3.png"
+import Client4 from "../public/client4.png"
+import checkericon from "../public/checkricon.png"
 import CtaBreakPastSection from "./CtaBreakPastSection";
 
 
