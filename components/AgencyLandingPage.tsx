@@ -12,10 +12,10 @@ import PricingSection from "@/components/PricingSection";
 import Image from "next/image";
 import logo from "@/app/assests/logo.png"
 import growthicon from "@/app/assests/growthicon.png"
-import Client1 from "@/app/assests/client1.png"
-import Client2 from "@/app/assests/client2.png"
-import Client3 from "@/app/assests/client3.png"
-import Client4 from "@/app/assests/client4.png"
+import Client1 from "@/app/assests/Client1.png"
+import Client2 from "@/app/assests/Client2.png"
+import Client3 from "@/app/assests/Client3.png"
+import Client4 from "@/app/assests/Client4.png"
 import checkericon from "@/app/assests/checkricon.png"
 import CtaBreakPastSection from "./CtaBreakPastSection";
 
