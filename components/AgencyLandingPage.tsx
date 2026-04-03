@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Star } from "lucide-react";
+import { ArrowRight, Check, Star } from "lucide-react";
 import A3FlywheelSection from "@/components/A3FlywheelSection";
 import CostBreakdownSection from "@/components/CostBreakdownSection";
 import FaqSection from "@/components/FaqSection";
@@ -9,11 +9,21 @@ import FlywheelProofSection from "@/components/FlywheelProofSection";
 import FoundersSection from "@/components/FoundersSection";
 import GrowthSystemProblemSection from "@/components/GrowthSystemProblemSection";
 import PricingSection from "@/components/PricingSection";
+import Image from "next/image";
+import logo from "@/public/logo.png"
+import growthicon from "@/public/growthicon.png"
+import Client1 from "@/public/client1.png"
+import Client2 from "@/public/client2.png"
+import Client3 from "@/public/client3.png"
+import Client4 from "@/public/client4.png"
+import checkericon from "@/public/checkricon.png"
+import CtaBreakPastSection from "./CtaBreakPastSection";
+
 
 const qualificationStats = [
-  { value: "Rs.30Cr+", label: "Annual Ad Spend Managed" },
+  { value: "₹30Cr+", label: "Annual Ad Spend Managed" },
   { value: "1%", label: "Top 1% Meta Performance Marketing Team" },
-  { value: "Rs.3L+", label: "Built for Brands Spending Rs.3L+ per Month on Ads" },
+  { value: "₹3L+", label: "Built for Brands Spending ₹3L+ per Month on Ads" },
 ];
 
 const fitPoints = [
@@ -38,13 +48,10 @@ export default function AgencyLandingPage() {
       <section className="relative isolate overflow-hidden bg-[linear-gradient(115.83deg,#0F0C29_0%,#1A1560_40%,#24243E_100%)] text-white">
         <div className="mx-auto max-w-[1440px] px-5 pb-14 pt-7 sm:px-6 lg:px-20 lg:pb-12 lg:pt-[35px]">
           <div className="flex items-center gap-2">
-            <div className="relative h-6 w-4">
-              <span className="absolute left-[3px] top-0 h-3.5 w-2.5 rounded-t-full border-2 border-white border-b-0" />
-              <span className="absolute left-[5px] top-[15px] h-[3px] w-[3px] rounded-full bg-white" />
-            </div>
-            <span className="text-[26px] font-extrabold leading-none tracking-[-0.03em] text-[#FAFAFA]">
-              Acquirely
-            </span>
+           
+           <Image src={logo} alt="Brand Logo" width={100} height={24} className="h-6 w-auto">
+
+           </Image>
           </div>
 
           <div className="mt-10 grid gap-10 lg:mt-[43px] lg:grid-cols-[598px_1fr] lg:items-start">
@@ -56,7 +63,7 @@ export default function AgencyLandingPage() {
 
               <h1 className="mt-6 text-[34px] font-extrabold leading-[0.95] tracking-[-0.5px] text-white sm:text-[40px] lg:text-[48px] lg:leading-[48px]">
                 <span className="block">Scale Your Brand from</span>
-                <span className="block bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_45%,#FB923C_100%)] bg-clip-text text-transparent">
+                <span className="block bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_25%,#F97316_80%)] bg-clip-text text-transparent">
                   Rs.3L to Rs.50L+ Monthly
                 </span>
                 <span className="block bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_100%)] bg-clip-text text-transparent">
@@ -65,16 +72,19 @@ export default function AgencyLandingPage() {
                 <span className="block">on Meta - Profitably</span>
               </h1>
 
-              <p className="mt-8 max-w-[598px] text-[16px] font-medium leading-7 text-white/90 sm:text-[17px] lg:mt-11 lg:text-[18px] lg:leading-[29px]">
+                <p
+                className="mt-8 max-w-[598px] text-[16px] font-medium leading-7 text-white/90 sm:text-[17px] lg:mt-11 lg:text-[18px] lg:leading-[29px] font-['Open_Sans']"
+                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
                 We don't just run Meta Ads campaigns. We build performance
                 marketing systems. Our A3 Flywheel Model identifies winning
                 creatives, scales them strategically, and stabilizes ROAS, even
                 during Meta algorithm changes.
-              </p>
+                </p>
 
               <Link
                 href="#"
-                className="mt-8 inline-flex min-h-[56px] w-full max-w-[341px] items-center justify-center gap-2 bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-5 text-center text-[16px] font-bold leading-6 text-white transition hover:brightness-110 sm:text-[18px]"
+                className="mt-8 inline-flex min-h-[56px] w-full max-w-[351px] items-center justify-center gap-2 bg-[linear-gradient(102.78deg,#6366F1_0%,#4F46E5_100%)] px-5 text-center text-[16px] font-bold leading-6 text-white transition hover:brightness-110 sm:text-[18px]"
               >
                 Book Your Growth Diagnosis Call
                 <ArrowRight className="h-4 w-4" />
@@ -82,15 +92,13 @@ export default function AgencyLandingPage() {
 
               <div className="mt-6 flex flex-col gap-5">
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
-                  <div className="flex items-center">
-                    {["#991B1B", "#1D4ED8", "#7C2D12", "#6B7280"].map((color, index) => (
-                      <div
-                        key={index}
-                        className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-[#3730A3]"
-                        style={{
-                          marginLeft: index === 0 ? 0 : -12,
-                          background: `linear-gradient(135deg, ${color} 0%, #E5E7EB 100%)`,
-                        }}
+                    <div className="flex items-center">
+                    {[Client1, Client2, Client3, Client4].map((client, index) => (
+                      <Image
+                      key={index}
+                      src={client}
+                      alt={`Client ${index + 1}`}
+                      className="-ml-3 h-12 w-12 rounded-full border-1 border-[#3730A3] transition-transform duration-300 hover:scale-110"
                       />
                     ))}
                     <div className="relative -ml-3 grid h-10 w-10 place-items-center rounded-full border-2 border-[#3730A3] bg-[linear-gradient(135deg,#6366F1_0%,#4F46E5_100%)] text-[12px] font-bold text-white">
@@ -110,27 +118,24 @@ export default function AgencyLandingPage() {
                       from 88 agency founders in the program
                     </p>
                   </div>
-                </div>
-
-                <div className="flex items-center gap-2.5 border-l-0 border-[#334155] pl-0 sm:border-l sm:pl-5">
-                  <div className="grid h-8 w-8 place-items-center rounded-md border border-[#047857] bg-[#022C22]">
-                    <CheckCircle2 className="h-4 w-4 text-[#34D399]" />
-                  </div>
+                    <div className="flex items-center gap-2.5 border-l-0 border-[#334155] pl-0 sm:border-l sm:pl-5">
+                 <Image src={checkericon} alt="Check Icon" className="h-8 w-8" />
                   <p className="text-[12px] leading-4 text-[#CBD5E1]">
                     Results guaranteed
                     <br />
                     or full refund
                   </p>
                 </div>
+                </div>
+
+              
               </div>
             </div>
 
-            <div className="relative pt-2 lg:pt-[99px]">
+            <div className="relative ml-14 pt-2 lg:pt-[99px]">
               <div className="ml-auto h-[240px] w-full rounded-[8px] bg-[#D9D9D9] sm:h-[280px] lg:h-[313px] lg:max-w-[564px]" />
               <div className="relative mt-4 flex h-[62px] w-[181px] items-center rounded-2xl border border-white/10 bg-white/5 px-[17px] shadow-[0px_0px_40px_rgba(99,102,241,0.15),0px_4px_24px_rgba(0,0,0,0.4)] backdrop-blur-[6px] lg:absolute lg:bottom-[-25px] lg:left-[-96px] lg:mt-0">
-                <div className="grid h-9 w-9 place-items-center rounded-lg border border-[#047857] bg-[#064E3B] text-[16px] text-[#34D399]">
-                  ^
-                </div>
+               <Image src={growthicon} alt="Growth Icon" className="h-8 w-8" />
                 <div className="ml-3">
                   <p className="text-[14px] font-semibold leading-5 text-white">+$18,200 MRR</p>
                   <p className="text-[12px] font-normal leading-4 text-[#94A3B8]">
@@ -153,10 +158,10 @@ export default function AgencyLandingPage() {
                   index < qualificationStats.length - 1 ? "lg:border-r lg:border-black/70" : ""
                 }`}
               >
-                <p className="text-[28px] font-extrabold leading-9 text-[#252525] sm:text-[30px]">
+                <p   style={{ fontFamily: "'Sora', sans-serif" }}   className="text-[28px] font-extrabold leading-9 text-[#252525] sm:text-[30px]">
                   {stat.value}
                 </p>
-                <p className="mt-1 max-w-[320px] text-[13px] leading-5 text-[#707984] sm:text-[14px]">
+                <p  style={{ fontFamily: "'Sora', sans-serif" }} className="mt-1 max-w-[320px] text-[13px] leading-5 text-[#707984] sm:text-[14px]">
                   {stat.label}
                 </p>
               </div>
@@ -165,7 +170,7 @@ export default function AgencyLandingPage() {
         </div>
 
         <div className="mx-auto max-w-[1440px] px-5 pb-16 pt-16 sm:px-6 lg:px-20 lg:pb-24 lg:pt-20">
-          <div className="mx-auto max-w-[690px] text-center">
+          <div className="mx-auto max-w-[890px] text-center">
             <h2 className="text-[32px] font-extrabold leading-[1.05] sm:text-[36px] lg:text-[40px] lg:leading-[36px]">
               <span className="bg-[linear-gradient(90deg,#818CF8_0%,#F97316_42.79%)] bg-clip-text text-transparent">
                 Who This Is For
@@ -181,8 +186,8 @@ export default function AgencyLandingPage() {
           <div className="mx-auto mt-12 grid max-w-[1128px] gap-5 lg:grid-cols-2">
             <div className="rounded-[14px] border border-[#065F46] bg-[#F1FBF8] p-6 sm:p-[33px]">
               <div className="flex items-start gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-md border border-[#047857] bg-[#022C22]">
-                  <CheckCircle2 className="h-5 w-5 text-[#34D399]" />
+                <div className="grid h-10 w-10 place-items-center rounded-[4px] border border-[#047857] bg-[#022C22]">
+                  <Check className="h-5 w-5 text-[#34D399]" />
                 </div>
                 <div>
                   <h3 className="text-[20px] font-bold leading-7 text-black">This Is For You</h3>
@@ -196,7 +201,7 @@ export default function AgencyLandingPage() {
                 {fitPoints.map((point) => (
                   <div key={point} className="flex items-start gap-3">
                     <div className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border border-[#047857] bg-[#022C22]">
-                      <CheckCircle2 className="h-3 w-3 text-[#34D399]" />
+                      <Check className="h-3 w-3 text-[#34D399]" />
                     </div>
                     <p className="text-[14px] font-semibold leading-5 text-black">{point}</p>
                   </div>
@@ -214,7 +219,7 @@ export default function AgencyLandingPage() {
 
             <div className="rounded-[14px] border border-[#F87171] bg-[#FEF5F5] p-6 sm:p-[33px]">
               <div className="flex items-start gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-md border border-[#991B1B] bg-[#450A0A]">
+                <div className="grid h-10 w-10 place-items-center rounded-[4px] border border-[#991B1B] bg-[#450A0A]">
                   <span className="text-[20px] leading-none text-[#F87171]">x</span>
                 </div>
                 <div>
@@ -248,7 +253,7 @@ export default function AgencyLandingPage() {
             <Link href="#" className="font-semibold text-[#818CF8] underline">
               Apply anyway
             </Link>{" "}
-            - we'll let you know within 24 hours.
+            -- we'll let you know within 24 hours.
           </p>
         </div>
       </section>
@@ -260,6 +265,7 @@ export default function AgencyLandingPage() {
       <CostBreakdownSection />
       <FoundersSection />
       <FaqSection />
+      <CtaBreakPastSection/>
     </main>
   );
 }

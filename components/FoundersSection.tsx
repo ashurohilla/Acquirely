@@ -1,10 +1,15 @@
 import Link from "next/link";
+import kunalmandal from "@/public/kunalmandal .png"
+import mausamarora from "@/public/mausam arora.png";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 const founders = [
   {
     name: "Kunal Mandal",
     role: "Founder, Acquirely",
     title: "Campaign Execution & Performance Lead",
+    mainimage: kunalmandal,
     description:
       "Kunal has battle-tested hundreds of ad variations across sectors - spotting patterns, plugging leaks, and turning cold traffic into paying customers with freakish consistency.",
     image:
@@ -14,6 +19,7 @@ const founders = [
     name: "Mausam Arora",
     role: "Founder, Acquirely",
     title: "Strategic Architect & Growth Lead",
+    mainimage: mausamarora,
     description:
       "Mausam architects high-conversion funnels for founders who need results without bloated teams or endless experiments. His playbook blends deep GTM thinking with ruthless execution that unlocks scale.",
     image:
@@ -27,17 +33,20 @@ function FounderCard({
   title,
   description,
   image,
+  mainimage,
 }: {
   name: string;
   role: string;
   title: string;
   description: string;
   image: string;
+  mainimage: StaticImageData;
 }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)]">
-      <div className="relative h-[290px] w-full" style={{ background: image }}>
+      <div className="relative h-[380px] w-full" style={{ background: image }}>
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/65 to-transparent px-4 pb-4 pt-16 text-white">
+         <Image src={mainimage} alt={name} className=" h-full w-full object-cover" />
           <div>
             <h3 className="text-[24px] font-semibold leading-7">{name}</h3>
             <p className="mt-1 text-[12px] text-white/80">{role}</p>

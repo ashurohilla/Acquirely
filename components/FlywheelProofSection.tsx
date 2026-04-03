@@ -1,5 +1,13 @@
 import { BarChart3, Lightbulb, Play, TrendingUp } from "lucide-react";
-
+import Image from "next/image";
+import growth from "@/public/growth.png";
+import chart from "@/public/charts.png";
+import ruppe from "@/public/ruppe.png";
+import shopifydashboard from "@/public/shopifydashboard.png";
+import campaigns from "@/public/campaigns.png";
+import campaigns2 from "@/public/campaigns2.png";
+import metaadsmanager from "@/public/metadsmanager.png";
+import { StaticImageData } from "next/image";
 const benefitCards = [
   {
     title: "Data Compounds",
@@ -9,6 +17,7 @@ const benefitCards = [
     label: "Smarter by Month 6",
     icon: BarChart3,
     iconText: null,
+    image: growth,
   },
   {
     title: "Revenue Compounds",
@@ -18,6 +27,7 @@ const benefitCards = [
     label: "Revenue Growth in 6 Months",
     icon: TrendingUp,
     iconText: null,
+    image: chart,
   },
   {
     title: "CAC Compounds Down",
@@ -27,6 +37,7 @@ const benefitCards = [
     label: "Average CAC Reduction",
     icon: null,
     iconText: "Rs",
+  image: ruppe,
   },
 ];
 
@@ -69,7 +80,7 @@ function BenefitCard({
   description,
   value,
   label,
-  icon: Icon,
+  image,
   iconText,
 }: {
   title: string;
@@ -78,12 +89,13 @@ function BenefitCard({
   label: string;
   icon: typeof BarChart3 | typeof TrendingUp | null;
   iconText: string | null;
+  image: StaticImageData;
 }) {
   return (
     <div className="rounded-[6px] border border-black/10 bg-white px-6 py-10 text-center sm:px-10 sm:py-[52px]">
       <div className="mx-auto grid h-[72px] w-[75px] place-items-center rounded-[5px] bg-[#5652E9]">
-        {Icon ? (
-          <Icon className="h-10 w-10 text-[#FFCD29]" />
+        {image ? (
+          <Image src={image} alt={title} className="h-10 w-10" />
         ) : (
           <span className="text-3xl font-extrabold leading-none text-[#FFCD29] sm:text-5xl">
             {iconText}
@@ -304,15 +316,15 @@ export default function FlywheelProofSection() {
 
           <div className="relative min-h-0 lg:min-h-[920px]">
             <div className="relative">
-              <DummyScreenshot title="Meta Ads Manager" className="h-[336px] w-full rounded-lg" />
+            <Image src={metaadsmanager} alt="Meta Ads Manager" className="h-[336px] w-full rounded-lg" />
               <div className="absolute left-1/2 top-1/2 grid h-[63px] w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/95 shadow-lg">
                 <Play className="ml-1 h-8 w-8 fill-black text-black" />
               </div>
             </div>
             <div className="mt-4 grid gap-4 lg:contents">
-              <DummyScreenshot title="Shopify Dashboard" className="h-[201px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px]" />
-              <DummyScreenshot title="Analytics Panel" className="h-[182px] w-full lg:absolute lg:left-[7px] lg:top-[540px] lg:w-[380px]" />
-              <DummyScreenshot title="Performance Report" className="h-[209px] w-full lg:absolute lg:right-0 lg:top-[711px] lg:w-[445px]" />
+              <Image src={shopifydashboard} alt="Shopify Dashboard" className="h-[261px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px]rounded-lg" />
+              <Image src={campaigns} alt="Campaigns" className="h-[201px] w-full lg:absolute lg:left-[7px] lg:top-[540px] lg:w-[380px]" />
+              <Image src={campaigns2} alt="Campaigns 2" className="h-[201px] w-full lg:absolute lg:right-0 lg:top-[640px] lg:w-[380px]" />
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import flywheelmodel from "@/public/flywheelmodel.png"
+import Image from "next/image";
 const flywheelPhases = [
   {
     code: "A1",
@@ -37,56 +39,9 @@ const flywheelPhases = [
 function FlywheelDiagramPlaceholder() {
   return (
     <div className="rounded-[14px] bg-white p-3 shadow-[0px_0px_4px_rgba(0,0,0,0.18)] sm:p-5">
-      <div className="rounded-[14px] border border-[#E9E6E0] bg-[#FFFDFC] p-4 sm:p-8">
-        <div className="flex min-h-[260px] items-center justify-center sm:min-h-[320px]">
-          <div className="relative flex w-full max-w-[640px] items-center justify-center gap-2 sm:gap-4">
-            <div className="flex h-[210px] w-[230px] flex-col justify-between rounded-[22px] bg-[#C9D7FB] p-5">
-              <div className="mx-auto rounded bg-[#152C4C] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
-                Campaign 1
-              </div>
-              <div className="grid grid-cols-4 gap-2">
-                {Array.from({ length: 8 }).map((_, index) => (
-                  <div
-                    key={index}
-                    className="rounded bg-[#173150] px-1 py-2 text-center text-[8px] font-semibold text-white"
-                  >
-                    Ad {index + 1}
-                  </div>
-                ))}
-              </div>
-              <div className="mx-auto rounded bg-[#152C4C] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
-                Winners
-              </div>
-            </div>
-
-            <div className="flex h-[210px] w-[92px] flex-col items-center justify-center rounded-[22px] bg-[#FFC15C]">
-              <div className="rounded bg-[#152C4C] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
-                Scale
-              </div>
-              <div className="mt-10 rounded bg-[#152C4C] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
-                Proven
-              </div>
-            </div>
-
-            <div className="flex h-[210px] w-[92px] flex-col justify-between rounded-[22px] bg-[#C9D7FB] p-4">
-              <div className="mx-auto rounded bg-[#152C4C] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
-                Campaign 2
-              </div>
-              <div className="mx-auto h-16 w-[10px] rounded bg-[#173150]" />
-              <div className="grid grid-cols-3 gap-1">
-                {Array.from({ length: 6 }).map((_, index) => (
-                  <div key={index} className="h-9 rounded bg-[#173150]" />
-                ))}
-              </div>
-            </div>
-
-            <div className="pointer-events-none absolute inset-0 hidden lg:block">
-              <div className="absolute left-[7%] top-[8%] h-[72%] w-[26%] rounded-[14px] border border-dashed border-[#5B6472]" />
-              <div className="absolute right-[8%] top-[12%] h-[72%] w-[15%] rounded-[14px] border border-dashed border-[#5B6472]" />
-            </div>
-          </div>
-        </div>
-      </div>
+    
+     <Image src={flywheelmodel} alt="Flywheel Model" />
+      
     </div>
   );
 }

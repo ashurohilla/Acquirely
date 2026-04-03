@@ -1,4 +1,7 @@
 import { AlertTriangle, X } from "lucide-react";
+import Image from "next/image";
+import Problem from "@/public/problem.png";
+import current from "@/public/current.png";
 
 const problemCards = [
   {
@@ -47,7 +50,7 @@ export default function GrowthSystemProblemSection() {
       <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-6 lg:px-[202px] lg:py-[78px]">
         <div className="mx-auto max-w-[779px] text-center">
           <div className="inline-flex h-[34px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-[14px]">
-            <AlertTriangle className="h-[14px] w-[14px] fill-[#FACC15] text-[#FACC15]" />
+           <Image src={Problem} alt="Problem Icon" className="h-5 w-5" />
             <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-[#5332E2] sm:text-[12px]">
               The real problem
             </span>
@@ -75,9 +78,7 @@ export default function GrowthSystemProblemSection() {
 
         <div className="mt-10 rounded-[4px] border-2 border-[#CFD5FD] bg-[#E5EBFF] px-4 py-6 lg:px-10 lg:py-8">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
-            <div className="grid h-[53px] w-[55px] shrink-0 place-items-center rounded-[5px] bg-[#5652E9]">
-              <AlertTriangle className="h-[34px] w-[34px] fill-[#FFCD29] text-[#FFCD29]" />
-            </div>
+           <Image src={current} alt="Current Icon" className="h-12 w-12" />
             <div className="max-w-[846px]">
               <h3 className="text-[16px] font-semibold leading-7 text-black">
                 Then Meta Changed the Game
