@@ -4,7 +4,7 @@ import growth from "@/app/assests/growth.png";
 import chart from "@/app/assests/charts.png";
 import ruppe from "@/app/assests/ruppe.png";
 import shopifydashboard from "@/app/assests/shopifydashboard.png";
-import campaigns from "@/app/assests/campaigns.png";
+import group from "@/app/assests/group.png";
 import campaigns2 from "@/app/assests/campaigns2.png";
 import metaadsmanager from "@/app/assests/metadsmanager.png";
 import { StaticImageData } from "next/image";
@@ -224,9 +224,9 @@ function AlertTriangleLike() {
 export default function FlywheelProofSection() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-6 lg:px-20 lg:py-[96px]">
+      <div className="mx-auto max-w-[1440px] px-5 py-2 md:py-16 sm:px-6 lg:px-20 lg:py-[96px]">
         <div className="mx-auto max-w-[757px] text-center">
-          <h2 className="text-[31px] font-extrabold leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
+          <h2 className="text-[31px] font-Montserrat leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
             Why the Flywheel Wins Every Time
           </h2>
           <p className="mt-5 text-[16px] leading-7 text-[#7B8BA0] sm:text-[18px]">
@@ -247,14 +247,14 @@ export default function FlywheelProofSection() {
               Real client. Real numbers. Real proof.
             </span>
           </div>
-          <h2 className="mx-auto mt-8 max-w-[873px] text-[31px] font-extrabold leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
+          <h2 className="mx-auto font-Montserrat mt-8 max-w-[873px] text-[31px]  leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
             Real Results from the A3 Flywheel Model
           </h2>
         </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,534px)_minmax(0,621px)] lg:items-start lg:justify-center">
           <div>
-            <h3 className="text-[26px] font-bold leading-7 text-black">Case Study: Gaming Brand</h3>
+            <h3 className="text-[26px] font-opensans leading-7 text-black">Case Study: Gaming Brand</h3>
 
             <div className="mt-11 space-y-[18px]">
               <div className="rounded-2xl border border-[#F87171] bg-white p-6">
@@ -322,9 +322,7 @@ export default function FlywheelProofSection() {
               </div>
             </div>
             <div className="mt-4 grid gap-4 lg:contents">
-              <Image src={shopifydashboard} alt="Shopify Dashboard" className="h-[261px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px]rounded-lg" />
-              <Image src={campaigns} alt="Campaigns" className="h-[201px] w-full lg:absolute lg:left-[7px] lg:top-[540px] lg:w-[380px]" />
-              <Image src={campaigns2} alt="Campaigns 2" className="h-[201px] w-full lg:absolute lg:right-0 lg:top-[640px] lg:w-[380px]" />
+              <Image src={group} alt="Shopify Dashboard" className="md:h-[561px] h-[450px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px]rounded-lg" />
             </div>
           </div>
         </div>

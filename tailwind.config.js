@@ -17,8 +17,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        gilroy: ['Gilroy', 'sans-serif'],
-        gilroy_bold: ['GilroyBold', 'sans-serif'],
+        Montserrat: ['Montserrat', 'sans-serif'],
+        opensans: ['opensans', 'sans-serif'],
         gilroy_medium: ['GilroyMedium', 'sans-serif'],
         gilroy_light: ['GilroyLight', 'sans-serif'],	
         charter_regular:['CharterSerif',  ],

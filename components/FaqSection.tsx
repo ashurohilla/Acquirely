@@ -107,7 +107,7 @@ export default function FaqSection() {
 
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-6 lg:px-20 lg:py-24">
+      <div className="mx-auto max-w-[1440px] px-5 md:py-8 sm:px-6 lg:px-20 lg:py-18">
         <div className="text-center">
           <div className="inline-flex h-[34px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-4">
             <span className="h-2 w-2 rounded-full bg-[#5332E2]" />
@@ -116,13 +116,13 @@ export default function FaqSection() {
             </span>
           </div>
 
-          <h2 className="mt-7 text-[32px] font-bold leading-[1.05] text-[#171717] sm:text-[38px] lg:text-[44px]">
+          <h2 className="mt-7 text-[32px] font-Montserrat  leading-[1.05] text-[#171717] sm:text-[38px] lg:text-[44px]">
             <span className="block">Built on Accountability</span>
             <span className="block bg-[linear-gradient(90deg,#818CF8_0%,#F59E0B_45%,#F87171_100%)] bg-clip-text text-transparent">
               Not Empty Promises
             </span>
           </h2>
-          <p className="mx-auto mt-5 max-w-[620px] text-[14px] leading-6 text-[#94A3B8]">
+          <p className="mx-auto  font-opensans mt-5 max-w-[620px] text-[14px] leading-6 text-[#94A3B8]">
             We're so confident in the A3 Flywheel that we back every Elite enrollment
             with an ironclad 90-day results guarantee. Here's exactly what that means.
           </p>
@@ -142,7 +142,7 @@ export default function FaqSection() {
             </span>
           </div>
 
-          <h2 className="mt-5 text-[32px] font-bold leading-[1.08] text-[#171717] sm:text-[38px] lg:text-[42px]">
+          <h2 className="mt-5 text-[32px] font-Montserrat  leading-[1.08] text-[#171717] sm:text-[38px] lg:text-[42px]">
             Frequently Asked Questions
           </h2>
           <p className="mx-auto mt-4 max-w-[520px] text-[14px] leading-6 text-[#8A8A8A]">

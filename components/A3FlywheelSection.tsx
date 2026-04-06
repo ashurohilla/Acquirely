@@ -38,7 +38,7 @@ const flywheelPhases = [
 
 function FlywheelDiagramPlaceholder() {
   return (
-    <div className="rounded-[14px] bg-white p-3 shadow-[0px_0px_4px_rgba(0,0,0,0.18)] sm:p-5">
+    <div className="rounded-[14px] bg-white p-3 md:shadow-[0px_0px_4px_rgba(0,0,0,0.18)] sm:p-5">
     
      <Image src={flywheelmodel} alt="Flywheel Model" />
       
@@ -49,7 +49,7 @@ function FlywheelDiagramPlaceholder() {
 export default function A3FlywheelSection() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-6 lg:px-20 lg:py-[84px]">
+      <div className="mx-auto max-w-[1440px] px-5 md:py-16 py-4 sm:px-6 lg:px-20 lg:py-[84px]">
         <div className="mx-auto max-w-[687px] text-center">
           <div className="inline-flex h-[34px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-[10px]">
             <span className="text-base">🚀</span>
@@ -58,14 +58,14 @@ export default function A3FlywheelSection() {
             </span>
           </div>
 
-          <h2 className="mt-8 text-[31px] font-extrabold leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
+          <h2 className="mt-8 font-Montserrat text-[26px] md:text-[31px] leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
             <span className="block">The Growth System Built for the</span>
             <span className="block bg-[linear-gradient(90deg,#818CF8_0%,#F97316_42.79%)] bg-clip-text text-transparent">
               New Meta Ads Era
             </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-[662px] text-[16px] leading-7 text-[#7B8BA0] sm:text-[18px]">
+          <p className="mx-auto font-opensans mt-5 max-w-[662px] text-[16px] leading-7 text-[#7B8BA0] sm:text-[18px]">
             Most brands approach advertising without a structured scaling framework.
             Instead of a system, they rely on random actions that don't compound growth.
             Here's what actually happens:

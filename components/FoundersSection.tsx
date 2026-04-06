@@ -97,7 +97,7 @@ export default function FoundersSection() {
             <span className="text-[10px] font-semibold uppercase tracking-[1.2px] text-[#5332E2]">Meet the founders</span>
           </div>
 
-          <h2 className="mt-7 text-[34px] font-semibold leading-[1.05] text-[#262626] sm:text-[40px] lg:text-[48px]">
+          <h2 className="mt-7 text-[34px] font-Montserrat leading-[1.05] text-[#262626] sm:text-[40px] lg:text-[48px]">
             The Minds Behind Acquirely
           </h2>
           <p className="mx-auto mt-5 max-w-[520px] text-[15px] leading-7 text-[#8A8A8A]">

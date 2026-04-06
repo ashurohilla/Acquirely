@@ -111,7 +111,7 @@ export default function PricingSection() {
             </span>
           </div>
 
-          <h2 className="mt-8 text-[31px] font-extrabold leading-[1.08] tracking-[-0.03em] sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
+          <h2 className="md:mt-8 mt-2 text-[31px] font-Montserrat leading-[1.08] tracking-[-0.03em] sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
             <span className="bg-[linear-gradient(90deg,#818CF8_0%,#C084FC_45%,#F97316_100%)] bg-clip-text text-transparent">
               Transparent, Performance-
             </span>

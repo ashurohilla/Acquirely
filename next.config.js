@@ -17,7 +17,7 @@ const nextConfig = {
         protocol: "https",
       },
       {
-        hostname: "scontent-lhr6-2.cdninstagram.com",
+        hostname: "fast.wistia.com",
         protocol: "https",
       },
       {
@@ -60,18 +60,22 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: `
-              default-src 'self';
-              script-src 'self' 'unsafe-eval' 'unsafe-inline';
-              style-src 'self' 'unsafe-inline';
-              img-src 'self' blob: data: https:;
-              font-src 'self' blob: data:;
-              connect-src 'self' https:;
-              frame-src 'self' https://www.youtube.com https://youtube.com blob:;
-              worker-src 'self' blob:;
-            `
-              .replace(/\s{2,}/g, " ")
-              .trim(),
+            value: [
+              "default-src 'self';",
+              // Allow Wistia scripts
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://fast.wistia.com https://*.wistia.com;",
+              // Allow Google Fonts and Wistia CSS
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fast.wistia.com;",
+              // Allow the actual font files
+              "font-src 'self' data: https://fonts.gstatic.com;",
+              // Allow Wistia video data and analytics
+              "connect-src 'self' https://fast.wistia.com https://*.wistia.com wss://distillery.wistia.com;",
+              // Allow Wistia images/thumbnails
+              "img-src 'self' blob: data: https://fast.wistia.com https://*.wistia.com;",
+              // Allow Wistia video frames
+              "frame-src 'self' https://fast.wistia.net https://fast.wistia.com;",
+              "worker-src 'self' blob:;"
+            ].join(' '),
           },
         ],
       },

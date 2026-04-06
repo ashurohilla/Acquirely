@@ -47,7 +47,7 @@ function ProblemCard({ title, description }: { title: string; description: strin
 export default function GrowthSystemProblemSection() {
   return (
     <section className="bg-[#F6F6F6]">
-      <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-6 lg:px-[202px] lg:py-[78px]">
+      <div className="mx-auto max-w-[1440px] px-5 py-4 md:py-16 sm:px-6 lg:px-[202px] lg:py-[78px]">
         <div className="mx-auto max-w-[779px] text-center">
           <div className="inline-flex h-[34px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-[14px]">
            <Image src={Problem} alt="Problem Icon" className="h-5 w-5" />
@@ -56,14 +56,14 @@ export default function GrowthSystemProblemSection() {
             </span>
           </div>
 
-          <h2 className="mt-8 text-[31px] font-extrabold leading-[1.08] tracking-[-0.02em] sm:text-[36px] lg:mt-11 lg:text-[40px] lg:leading-[44px]">
+          <h2 className="mt-8 font-Montserrat text-[31px]  leading-[1.08] tracking-[-0.02em] sm:text-[36px] lg:mt-11 lg:text-[40px] lg:leading-[44px]">
             <span className="bg-[linear-gradient(90deg,#818CF8_0%,#F97316_42.79%)] bg-clip-text text-transparent">
               You Don't Have an Ads Problem.
             </span>
             <span className="block text-black">You Have a Growth System Problem.</span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-[662px] text-[16px] leading-7 text-[#7B8BA0] sm:text-[18px]">
+          <p className="mx-auto font-opensans  mt-5 max-w-[662px] text-[16px] leading-7 text-[#7B8BA0] sm:text-[18px]">
             Most brands approach advertising without a structured scaling framework.
             Instead of a system, they rely on random actions that don't compound growth.
             Here's what actually happens:

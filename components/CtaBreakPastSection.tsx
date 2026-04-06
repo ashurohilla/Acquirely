@@ -4,17 +4,17 @@ export default function CtaBreakPastSection() {
     <section className="bg-[#101828] py-28 text-center">
       <div className="mx-auto max-w-[1024px] px-4">
         {/* Main Heading */}
-        <h2 className="font-montserrat text-[48px] font-bold leading-[58px] tracking-[-1px] text-white">
+        <h2 className="font-Montserrat text-[48px]  leading-[58px] tracking-[-1px] text-white">
           Ready to Break Past
           <br />
           {/* Apply Gradient to the specific text */}
-          <span className="bg-gradient-to-r from-[#818CF8] to-[#F97316] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#818CF8] font-Montserrat to-[#F97316] bg-clip-text text-transparent">
             ₹3L per Month?
           </span>
         </h2>
 
         {/* Supporting Text */}
-        <p className="mx-auto mt-6 max-w-[600px] font-open-sans text-[18px] leading-6 text-[#A3A3A3]">
+        <p className="mx-auto font-opensans mt-6 max-w-[600px] text-[18px] leading-6 text-[#A3A3A3]">
           If you&apos;re serious about building a predictable revenue engine with
           scalable Meta Ads, let&apos;s talk.
         </p>
@@ -24,7 +24,7 @@ export default function CtaBreakPastSection() {
         <div className="mt-12 flex items-center justify-center gap-2">
           <Link href="applynow" className="flex items-center gap-2.5 rounded border-2 border-white bg-white px-6 py-3.5 shadow-[0_4px_18px_rgba(15,23,42,0.1)] transition hover:bg-white/90">
           <button className="flex items-center gap-2.5 rounded border-2 border-white bg-white px-6 py-3.5 shadow-[0_4px_18px_rgba(15,23,42,0.1)] transition hover:bg-white/90">
-            <span className="font-montserrat text-[18px] font-bold leading-6 text-[#101828]">
+            <span className="font-Montserrat text-[18px] font-bold leading-6 text-[#101828]">
               Book Your Growth Diagnosis Call
             </span>
             <svg

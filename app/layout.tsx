@@ -9,9 +9,9 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Aquirely | Agency Acquisition Platform",
+  title: "Performance Marketing for Ecommerce Brands | ₹3L → ₹50L+",
   description:
-    "A modern acquisition platform for agencies and growth teams to manage campaigns, funnel performance, routing, and reporting.",
+    "Scale your ecommerce brand with top Meta Ads performance marketing. Predictable ROAS, proven results.",
 };
 
 export default function RootLayout({
