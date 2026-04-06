@@ -17,16 +17,16 @@ const nextConfig = {
         protocol: "https",
       },
       {
+        hostname: "fast.wistia.net",
+        protocol: "https",
+      },
+      {
+        protocol: "https",
+        hostname: "*.wistia.net",
+      },
+      {
+        protocol: "https",
         hostname: "fast.wistia.com",
-        protocol: "https",
-      },
-      {
-        protocol: "https",
-        hostname: "unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
       },
       {
         protocol: "https",
@@ -34,7 +34,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "gist.github.com",
+        hostname: "browser.sentry-cdn.com",
       },
       {
         protocol: "https",
@@ -53,29 +53,26 @@ const nextConfig = {
   },
 
   // 👇 ADD THIS SECTION TO FIX THE BLOB ERROR
- async headers() {
+   async headers() {
     return [
       {
-        source: "/:path*",
+        source: '/(.*)',
         headers: [
           {
-            key: "Content-Security-Policy",
+            key: 'Content-Security-Policy',
             value: [
-              "default-src 'self';",
-              // Allow Wistia scripts
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://fast.wistia.com https://*.wistia.com;",
-              // Allow Google Fonts and Wistia CSS
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fast.wistia.com;",
-              // Allow the actual font files
-              "font-src 'self' data: https://fonts.gstatic.com;",
-              // Allow Wistia video data and analytics
-              "connect-src 'self' https://fast.wistia.com https://*.wistia.com wss://distillery.wistia.com;",
-              // Allow Wistia images/thumbnails
-              "img-src 'self' blob: data: https://fast.wistia.com https://*.wistia.com;",
-              // Allow Wistia video frames
-              "frame-src 'self' https://fast.wistia.net https://fast.wistia.com;",
-              "worker-src 'self' blob:;"
-            ].join(' '),
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' http://fast.wistia.com https://fast.wistia.com https://*.wistia.com http://fast.wistia.net https://fast.wistia.net https://*.wistia.net https://browser.sentry-cdn.com",
+              // ✅ Added *.sentry.io and *.ingest.sentry.io for Wistia's error reporting
+              // ✅ Added http://fast.wistia.net for plugin JS files loaded over HTTP
+              "connect-src 'self' http://fast.wistia.com https://fast.wistia.com https://*.wistia.com http://fast.wistia.net https://fast.wistia.net https://*.wistia.net wss://distillery.wistia.com *.supabase.co https://*.sentry.io https://*.ingest.sentry.io https://browser.sentry-cdn.com",
+              "img-src 'self' data: blob: https://*.wistia.com https://*.wistia.net https://*.wi.st",
+              "media-src 'self' blob: http://*.wistia.net https://*.wistia.com https://*.wistia.net https://*.wi.st",
+              "frame-src 'self' https://*.wistia.com https://*.wistia.net",
+              "style-src 'self' 'unsafe-inline' https://*.wistia.com https://*.wistia.net",
+              "worker-src blob: 'self'",
+              "font-src 'self' data: https://*.wistia.com https://*.wistia.net",
+            ].join('; '),
           },
         ],
       },

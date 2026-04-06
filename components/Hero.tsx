@@ -11,6 +11,17 @@ import Client3 from "@/app/assests/Client3.png"
 import Client4 from "@/app/assests/Client4.png"
 import checkericon from "@/app/assests/checkricon.png"
 import Script from "next/script"; // Import this at the top
+import dynamic from 'next/dynamic';
+
+
+
+const WistiaPlayer = dynamic(() => import('@/components/WistiaPlayer'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full rounded-lg bg-white/10 animate-pulse" style={{ paddingTop: '56.25%' }} />
+  ),
+});
+
 
 const qualificationStats = [
   { value: "₹30Cr+", label: "Annual Ad Spend Managed" },
@@ -126,29 +137,11 @@ export default function AgencyLandingPage() {
 
 <div className="relative ml-14 pt-2 lg:pt-[99px] hidden lg:block">
   {/* Move scripts to Next.js Script components */}
- <Script src="https://fast.wistia.com/player.js" strategy="afterInteractive" />
-      <Script src="https://fast.wistia.com/embed/nm2ou94x6d.js" strategy="afterInteractive" type="module" />
+ <WistiaPlayer mediaId="nm2ou94x6d" />
 
-      {/* 2. Style Tag with Hydration protection */}
-      <style dangerouslySetInnerHTML={{ __html: `
-        wistia-player[media-id='nm2ou94x6d']:not(:defined) { 
-          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nm2ou94x6d/swatch'); 
-          display: block; 
-          filter: blur(5px); 
-          padding-top:56.25%; 
-        }
-      `}} />
 
-      {/* 3. The Player with the ID you found */}
-      <wistia-player 
-        media-id="nm2ou94x6d" 
-        aspect="1.7777777777777777"
-        suppressHydrationWarning={true}
-      />
 </div>
-            
-            
-            
+          
             
             </div>
         </div>
@@ -164,10 +157,10 @@ export default function AgencyLandingPage() {
                   index < qualificationStats.length - 1 ? "lg:border-r lg:border-black/70" : ""
                 }`}
               >
-                <p   style={{ fontFamily: "'Sora', sans-serif" }}   className="text-[28px] font-extrabold leading-9 text-[#252525] sm:text-[30px]">
+                <p      className="text-[28px] font-Montserrat  leading-9 text-[#252525] sm:text-[30px]">
                   {stat.value}
                 </p>
-                <p  style={{ fontFamily: "'Sora', sans-serif" }} className="mt-1 max-w-[320px] text-[13px] leading-5 text-[#707984] sm:text-[14px]">
+                <p   className="mt-1 max-w-[320px] font-opensans text-[13px] leading-5 text-[#707984] sm:text-[14px]">
                   {stat.label}
                 </p>
               </div>
