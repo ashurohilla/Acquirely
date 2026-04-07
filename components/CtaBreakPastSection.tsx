@@ -1,14 +1,14 @@
 import Link from "next/link";
 export default function CtaBreakPastSection() {
   return (
-    <section className="bg-[#101828] py-28 text-center">
+    <section className="bg-[#101828] mt-4 py-28 text-center">
       <div className="mx-auto max-w-[1024px] px-4">
         {/* Main Heading */}
-        <h2 className="font-Montserrat text-[48px]  leading-[58px] tracking-[-1px] text-white">
+        <h2 className="font-Montserrat md:text-[48px] text-[32px]  md:leading-[58px] leading-8 tracking-[-1px] text-white">
           Ready to Break Past
           <br />
           {/* Apply Gradient to the specific text */}
-          <span className="bg-gradient-to-r from-[#818CF8] font-Montserrat to-[#F97316] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#818CF8] font-Montserrat  to-[#F97316] bg-clip-text text-transparent">
             ₹3L per Month?
           </span>
         </h2>
@@ -22,9 +22,9 @@ export default function CtaBreakPastSection() {
         {/* CTA Button */}
         
         <div className="mt-12 flex items-center justify-center gap-2">
-          <Link href="applynow" className="flex items-center gap-2.5 rounded border-2 border-white bg-white px-6 py-3.5 shadow-[0_4px_18px_rgba(15,23,42,0.1)] transition hover:bg-white/90">
+          <Link href="applynow" >
           <button className="flex items-center gap-2.5 rounded border-2 border-white bg-white px-6 py-3.5 shadow-[0_4px_18px_rgba(15,23,42,0.1)] transition hover:bg-white/90">
-            <span className="font-Montserrat text-[18px] font-bold leading-6 text-[#101828]">
+            <span className="font-Montserrat md:text-[18px] text-[12px] font-bold leading-6 text-[#101828]">
               Book Your Growth Diagnosis Call
             </span>
             <svg
@@ -48,7 +48,7 @@ export default function CtaBreakPastSection() {
         </div>
 
         {/* Powered By Line */}
-        <div className="mt-20 border-t border-white/5 pt-8">
+        <div className="md:mt-20 mt-2 border-t border-white/5 pt-8">
           <p className="font-open-sans text-[14px] tracking-wide text-[#4B5563]">
             Powered by{" "}
             <a 

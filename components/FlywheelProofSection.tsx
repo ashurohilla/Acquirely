@@ -240,10 +240,10 @@ export default function FlywheelProofSection() {
           ))}
         </div>
 
-        <div className="mt-[90px] text-center">
+        <div className="md:mt-[90px] mt-8 text-center">
           <div className="inline-flex h-[34px] items-center gap-2 rounded-[4px] border border-[#CFD5FD] bg-[#EDEFFF] px-[18px]">
             <span className="h-2 w-2 rounded-full bg-[#5332E2]" />
-            <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-[#5332E2] sm:text-[12px]">
+            <span className="md:text-[11px] text-[10px] font-semibold uppercase tracking-[0.8px] text-[#5332E2] sm:text-[12px]">
               Real client. Real numbers. Real proof.
             </span>
           </div>

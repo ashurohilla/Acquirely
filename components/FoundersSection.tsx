@@ -43,15 +43,11 @@ function FounderCard({
   mainimage: StaticImageData;
 }) {
   return (
-    <div className="overflow-hidden  mx-auto rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)]">
-      <div className="relative flex  justify-center  h-[380px] w-full" >
-        <div className=" bottom-0 flex  justify-center bg-gradient-to-t from-black/65 to-transparent px-2 pb-4 pt-16 text-white">
-         <Image src={mainimage} alt={name} className="items-center  h-full w-full" />
-          {/* <div>
-            <h3 className="text-[24px] font-semibold leading-7">{name}</h3>
-            <p className="mt-1 text-[12px] text-white/80">{role}</p>
-          </div>
-          <div className="grid h-7 w-7 place-items-center rounded bg-white/20 text-[12px] font-semibold">in</div> */}
+    <div className="mx-auto rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)]">
+      <div className="relative flex  justify-center  md:h-[380px] h-[340px] w-full" >
+        <div className=" bottom-0 flex  justify-center bg-gradient-to-t from-black/65 to-transparent px-2 pb-4 pt-6 text-white">
+         <Image src={mainimage} alt={name} className="items-center md:h-[300px]   h-[240px] w-full" />
+
         </div>
       </div>
       <div className="px-4 pb-5 pt-4">
