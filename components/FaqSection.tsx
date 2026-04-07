@@ -194,7 +194,7 @@ export default function FaqSection() {
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="#"
+              target="_blank" href="https://forms.acquirely.in/acquirely/form/AcquirelyLeads/formperma/2doC7L65w0M6PnuFIVX6g4BgwS3fzMDJYLwncK3fEeo"
               className="inline-flex h-11 items-center justify-center rounded-md bg-white px-5 text-[13px] font-medium text-[#4F46E5] transition hover:bg-slate-100"
             >
               Chat with Us

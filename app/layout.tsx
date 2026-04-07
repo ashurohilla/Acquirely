@@ -9,7 +9,7 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Performance Marketing for Ecommerce Brands | ₹3L → ₹50L+",
+  title: "Scale your brand from ₹3L to ₹50L+ in monthly Ad spend profitably.",
   description:
     "Scale your ecommerce brand with top Meta Ads performance marketing. Predictable ROAS, proven results.",
 };

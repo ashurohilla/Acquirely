@@ -85,7 +85,7 @@ function PricingCard(props: (typeof pricingPlans)[number]) {
       </div>
 
       <Link
-        href="applynow"
+      target="_blank" href="https://forms.acquirely.in/acquirely/form/AcquirelyLeads/formperma/2doC7L65w0M6PnuFIVX6g4BgwS3fzMDJYLwncK3fEeo"
         className={`mt-8 inline-flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] border text-[16px] font-bold transition sm:text-[18px] ${
           dark
             ? "border-white/20 bg-white text-[#111827] hover:bg-slate-100"
