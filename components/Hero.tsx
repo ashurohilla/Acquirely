@@ -4,28 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import dynamic from 'next/dynamic';
 import { 
-  ArrowRight, 
-  Check, 
+  ArrowRight,  
   Star,
-  BarChart3,
-  Brush,
-  Clock3,
-  Copy,
-  DollarSign,
-  Gauge,
-  Megaphone,
-  ShieldCheck,
-  Sparkles,
+
   UserRoundPlus,
 } from "lucide-react";
 
 // --- Assets (Ensure these paths match your project) ---
 import logo from "@/app/assests/logo.png";
 import checkericon from "@/app/assests/checkricon.png";
-import Client1 from "@/app/assests/Client1.png";
-import Client2 from "@/app/assests/Client2.png";
-import Client3 from "@/app/assests/Client3.png";
-import Client4 from "@/app/assests/Client4.png";
+import Client1 from "@/app/assests/Client1.jpg";
+import Client2 from "@/app/assests/Client2.jpg";
+import Client3 from "@/app/assests/Client3.jpg";
+import Client4 from "@/app/assests/Clieent4.jpg";
 
 // --- Dynamic Imports ---
 const WistiaPlayer = dynamic(() => import('@/components/WistiaPlayer'), {
