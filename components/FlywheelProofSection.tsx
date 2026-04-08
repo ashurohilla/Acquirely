@@ -285,7 +285,7 @@ export default function FlywheelProofSection() {
             </div>
             
             <div className="mt-4 lg:mt-0 grid gap-4 lg:contents">
-              <Image src={group} alt="Shopify Dashboard" className="md:h-[5661px] h-[550px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px] rounded-lg object-cover" />
+              <Image src={group} alt="Shopify Dashboard" className="md:h-[561px] h-[550px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px] rounded-lg object-cover" />
             </div>
           </div>
         </div>
