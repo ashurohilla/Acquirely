@@ -63,7 +63,7 @@ export default function CtaBreakPastSection() {
             
             {/* Left: Copyright */}
             <div className="text-[14px] text-white/90 order-2 md:order-1">
-              © 2025 Acquirely. All rights reserved.
+              © 2026 Acquirely. All rights reserved.
             </div>
 
             {/* Right: Links & Scroll to Top */}
