@@ -8,6 +8,7 @@ import group from "@/app/assests/group.png";
 import campaigns2 from "@/app/assests/campaigns2.png";
 import metaadsmanager from "@/app/assests/metadsmanager.png";
 import { StaticImageData } from "next/image";
+
 const benefitCards = [
   {
     title: "Data Compounds",
@@ -37,7 +38,7 @@ const benefitCards = [
     label: "Average CAC Reduction",
     icon: null,
     iconText: "Rs",
-  image: ruppe,
+    image: ruppe,
   },
 ];
 
@@ -163,54 +164,6 @@ function MiniMetric({ label, value, note }: { label: string; value: string; note
   );
 }
 
-function DummyScreenshot({ className, title }: { className?: string; title: string }) {
-  return (
-    <div className={`overflow-hidden rounded-lg bg-white shadow-[0px_0px_14px_rgba(0,0,0,0.18)] ${className ?? ""}`}>
-      <div className="h-7 bg-[#F3F4F6] px-3">
-        <div className="flex h-full items-center gap-1.5">
-          <span className="h-2.5 w-2.5 rounded-full bg-[#F87171]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#FACC15]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#4ADE80]" />
-        </div>
-      </div>
-      <div className="bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FAFC_100%)] p-3">
-        <div className="mb-3 flex items-center justify-between">
-          <div className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748B]">
-            {title}
-          </div>
-          <div className="rounded bg-[#2563EB] px-2 py-1 text-[10px] font-semibold text-white">
-            Export
-          </div>
-        </div>
-        <div className="grid grid-cols-[100px_1fr] gap-3 sm:grid-cols-[160px_1fr]">
-          <div className="space-y-2">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <div key={index} className="h-6 rounded bg-[#E5E7EB]" />
-            ))}
-          </div>
-          <div>
-            <div className="mb-2 grid grid-cols-5 gap-2">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <div key={index} className="h-7 rounded bg-[#DBEAFE]" />
-              ))}
-            </div>
-            {Array.from({ length: 7 }).map((_, row) => (
-              <div key={row} className="mb-2 grid grid-cols-5 gap-2">
-                {Array.from({ length: 5 }).map((_, col) => (
-                  <div
-                    key={col}
-                    className={`h-6 rounded ${row % 2 === 0 ? "bg-[#F8FAFC]" : "bg-[#EEF2FF]"}`}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function AlertTriangleLike() {
   return (
     <div className="relative h-[22px] w-[23px]">
@@ -247,7 +200,7 @@ export default function FlywheelProofSection() {
               Real client. Real numbers. Real proof.
             </span>
           </div>
-          <h2 className="mx-auto font-Montserrat mt-8 max-w-[873px] text-[31px]  leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
+          <h2 className="mx-auto font-Montserrat mt-8 max-w-[873px] text-[31px] leading-[1.08] text-black sm:text-[36px] lg:text-[40px] lg:leading-[44px]">
             Real Results from the A3 Flywheel Model
           </h2>
         </div>
@@ -288,7 +241,15 @@ export default function FlywheelProofSection() {
               </div>
             </div>
 
-            <h3 className="mt-12 text-[26px] font-bold leading-7 text-black">Results After 90 Days</h3>
+            {/* Mobile-Only Meta Ads Manager Image */}
+            <div className="relative mt-12 mb-4 block lg:hidden">
+              <Image src={metaadsmanager} alt="Meta Ads Manager" className="h-[316px] w-full rounded-lg object-cover" />
+              <div className="absolute left-1/2 top-1/2 grid h-[63px] w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/95 shadow-lg">
+                <Play className="ml-1 h-8 w-8 fill-black text-black" />
+              </div>
+            </div>
+
+            <h3 className="mt-4 lg:mt-12 text-[26px] font-bold leading-7 text-black">Results After 90 Days</h3>
 
             <div className="mt-8 rounded-[21px] border border-[#C9F6E1] bg-[#DEFBED] p-5 sm:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
@@ -314,15 +275,17 @@ export default function FlywheelProofSection() {
             </div>
           </div>
 
-          <div className="relative min-h-0 lg:min-h-[920px]">
-            <div className="relative">
-            <Image src={metaadsmanager} alt="Meta Ads Manager" className="h-[336px] w-full rounded-lg" />
+          <div className="relative min-h-0 lg:min-h-[920px] flex flex-col">
+            {/* Desktop-Only Meta Ads Manager Image */}
+            <div className="relative hidden lg:block lg:order-last lg:mt-0 mt-8">
+              <Image src={metaadsmanager} alt="Meta Ads Manager" className="md:h-[306px] h-[250px] w-full rounded-lg " />
               <div className="absolute left-1/2 top-1/2 grid h-[63px] w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/95 shadow-lg">
                 <Play className="ml-1 h-8 w-8 fill-black text-black" />
               </div>
             </div>
-            <div className="mt-4 grid gap-4 lg:contents">
-              <Image src={group} alt="Shopify Dashboard" className="md:h-[561px] h-[450px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px]rounded-lg" />
+            
+            <div className="mt-4 lg:mt-0 grid gap-4 lg:contents">
+              <Image src={group} alt="Shopify Dashboard" className="md:h-[5661px] h-[550px] w-full lg:absolute lg:right-0 lg:top-[393px] lg:w-[511px] rounded-lg object-cover" />
             </div>
           </div>
         </div>
